@@ -42,4 +42,15 @@ body {
   color: #ddd;
 }
 
+.forgot {
+  font-size: 0.8rem;
+  text-align: right;
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+}
+.forgot:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */
