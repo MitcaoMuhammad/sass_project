@@ -2,12 +2,45 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Segoe UI', sans-serif;
-	background: linear-gradient(135deg, #0059ff, #00aaff);
+	background: radial-gradient(circle, #0085ff, #003465);
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+}
+
+.img1 {
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	left: 0;
+}
+.img2 {
+	position: absolute;
+	z-index: -1;
+	bottom: 50;
+	right: 0;
+}
+.imglo1 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.imglo2 {
+	position: absolute;
+	bottom: 50;
+	right: 0;
+}
+
+.login-container {
+	width: 1000px;
+	height: 680px;
+	border-radius: 24px;
+	background: radial-gradient(circle, #0085ff, #003465);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .login-card {
