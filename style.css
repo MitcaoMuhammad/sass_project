@@ -67,4 +67,30 @@ body {
   background: #1f48ff;
 }
 
+.separator {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.social-login .social {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  transition: 0.3s;
+}
+.social-login .social:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
 /*# sourceMappingURL=style.css.map */
