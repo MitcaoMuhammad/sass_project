@@ -93,4 +93,14 @@ body {
   background: rgba(255, 255, 255, 0.5);
 }
 
+.register {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: #ccc;
+}
+.register a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */
