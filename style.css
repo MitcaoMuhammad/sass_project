@@ -53,4 +53,18 @@ body {
   text-decoration: underline;
 }
 
+.signin-btn {
+  background: #002aff;
+  padding: 0.8rem;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.signin-btn:hover {
+  background: #1f48ff;
+}
+
 /*# sourceMappingURL=style.css.map */
