@@ -1,57 +1,90 @@
+$white: #ffffff;
+$blue-light: #0085ff;
+$blue-dark: #003465;
+$input-bg: #003363;
+$card-bg: rgba(88, 130, 193, 0.28);
+$card-border: #5882c1;
+$button-hover: #064784;
+$social-border: #bcbec0;
+$social-bg-hover: #ffffffee;
+
 body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Segoe UI', sans-serif;
-	background: radial-gradient(circle, #0085ff, #003465);
+	background: radial-gradient(circle, $blue-light, $blue-dark);
 	height: 100vh;
 	display: flex;
+	color: $white;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
 }
 
-.img1 {
-	position: absolute;
-	z-index: -1;
-	bottom: 0;
-	left: 0;
-}
-.img2 {
-	position: absolute;
-	z-index: -1;
-	bottom: 50;
-	right: 0;
-}
-.imglo1 {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-}
-.imglo2 {
-	position: absolute;
-	bottom: 50;
-	right: 0;
+@for $i from 1 through 10 {
+	.img#{$i} {
+		position: absolute;
+		z-index: -1;
+	}
 }
 
-.login-container {
-	width: 1000px;
-	height: 680px;
-	border-radius: 24px;
-	background: radial-gradient(circle, #0085ff, #003465);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.img1 {
+	top: 534px;
+	right: 1242px;
+	width: 400px;
+	height: 400px;
+}
+.img2 {
+	top: 681px;
+	left: 1250px;
+}
+.img3 {
+	top: 40px;
+	left: 789px;
+	width: 400px;
+	height: 400px;
+}
+.img4 {
+	top: 565px;
+	left: 952px;
+}
+.img5 {
+	top: 611px;
+	left: 998px;
+}
+.img6 {
+	top: 465px;
+	left: 365px;
+}
+.img7 {
+	top: 573px;
+	left: 344px;
+}
+.img8 {
+	top: 210px;
+	left: 368px;
+	width: 173px;
+	height: 94px;
+}
+.img9 {
+	top: 326px;
+	left: 349px;
+}
+.img10 {
+	bottom: 697px;
+	left: 411px;
 }
 
 .login-card {
-	background: rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(20px);
-	padding: 2.5rem;
+	background: $card-bg;
+	backdrop-filter: blur(4px);
+	padding: 2.5rem 4.5rem;
 	border-radius: 20px;
 	width: 320px;
-	color: #fff;
+	color: $white;
 	text-align: center;
 	box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+	border: 1px solid $card-border;
 }
 
 .login-form {
@@ -60,53 +93,60 @@ body {
 	gap: 1rem;
 	margin-top: 1rem;
 
+	h2 {
+		text-align: left;
+		font-size: 24px;
+	}
+
 	label {
 		text-align: left;
-		font-size: 0.9rem;
+		font-size: 13px;
 	}
 
 	input {
 		padding: 0.8rem;
 		border: none;
 		border-radius: 8px;
-		background: rgba(255, 255, 255, 0.2);
-		color: #fff;
-	}
+		background: $input-bg;
+		color: $white;
 
-	&::placeholder {
-		color: #ddd;
+		&::placeholder {
+			color: $white;
+		}
 	}
 }
 
 .forgot {
 	font-size: 0.8rem;
-	text-align: right;
+	text-align: left;
 	display: block;
-	color: #ccc;
+	color: $white;
 	text-decoration: none;
 
 	&:hover {
 		text-decoration: underline;
 	}
 }
+
 .signin-btn {
-	background: #002aff;
-	padding: 0.8rem;
+	background: $input-bg;
+	padding: 1rem;
 	border: none;
-	color: white;
+	color: $white;
 	border-radius: 10px;
 	font-weight: bold;
+	font-size: 16px;
 	cursor: pointer;
 	transition: 0.3s;
 
 	&:hover {
-		background: #1f48ff;
+		background: $button-hover;
 	}
 }
 
 .separator {
 	font-size: 0.9rem;
-	color: #ccc;
+	color: $white;
 	margin-top: 1rem;
 }
 
@@ -116,18 +156,27 @@ body {
 	gap: 1rem;
 
 	.social {
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
+		width: 72px;
+		height: 35px;
+		border-radius: 8px;
 		border: none;
 		font-size: 1.2rem;
 		cursor: pointer;
-		background: rgba(255, 255, 255, 0.3);
-		color: #fff;
+		background: $white;
+		color: $white;
 		transition: 0.3s;
+		border: 1px solid $social-border;
+		position: relative;
+
+		.google-img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 
 		&:hover {
-			background: rgba(255, 255, 255, 0.5);
+			background: $social-bg-hover;
 		}
 	}
 }
@@ -135,10 +184,11 @@ body {
 .register {
 	font-size: 0.8rem;
 	margin-top: 1rem;
-	color: #ccc;
+	color: $white;
 
 	a {
-		color: #fff;
+		color: $white;
+		font-weight: bold;
 		text-decoration: underline;
 	}
 }
